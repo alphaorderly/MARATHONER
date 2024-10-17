@@ -4,18 +4,11 @@ import {SafeAreaView, Text} from 'react-native';
 import {authorize} from 'react-native-app-auth';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import authConfig from './src/constants/oAuth2/authConfig';
+import auth from './src/services/authorization/auth';
+import useSecureToken from './src/hooks/token/useSecureToken';
 
 const App: FC = () => {
-    const auth = async () => {
-        try {
-            console.log('start auth');
-            const response = await authorize(authConfig); // Promise를 기다림
-            console.log('Response', response); // 응답 결과를 출력
-        } catch (error) {
-            console.error('Error', error); // 에러가 발생하면 출력
-        }
-        console.log('end auth');
-    };
+    const {accessToken, membershipId, saveCredentials} = useSecureToken();
 
     return (
         <GestureHandlerRootView className="flex-1">
@@ -24,10 +17,16 @@ const App: FC = () => {
                     <Text
                         className="text-5xl"
                         onPress={() => {
-                            auth();
+                            auth(saveCredentials);
                         }}>
                         test
                     </Text>
+                    {accessToken !== null && (
+                        <Text className="text-2xl">{accessToken}</Text>
+                    )}
+                    {membershipId !== null && (
+                        <Text className="text-2xl">{membershipId}</Text>
+                    )}
                 </SafeAreaView>
             </NavigationContainer>
         </GestureHandlerRootView>

@@ -6944,6 +6944,7 @@ __metadata:
     react-native-screens: ^3.34.0
     react-native-vector-icons: ^10.2.0
     react-test-renderer: 18.3.1
+    rn-secure-storage: ^3.0.1
     tailwindcss: 3.3.2
     typescript: 5.0.4
   languageName: unknown
@@ -8816,6 +8817,13 @@ __metadata:
   bin:
     rimraf: ./bin.js
   checksum: 3ea587b981a19016297edb96d1ffe48af7e6af69660e3b371dbfc73722a73a0b0e9be5c88089fbeeb866c389c1098e07f64929c7414290504b855f54f901ab10
+  languageName: node
+  linkType: hard
+
+"rn-secure-storage@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "rn-secure-storage@npm:3.0.1"
+  checksum: 3a3d6a9818ea1d9fb349711f0e8e0d220d8657e2c9155d0ef96e260209cd534f59d99333457055fcdd280b43c0fee26a83f2a7626be83ca9463d2618a7c30054
   languageName: node
   linkType: hard
 
