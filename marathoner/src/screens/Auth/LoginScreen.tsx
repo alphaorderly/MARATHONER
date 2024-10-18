@@ -19,55 +19,32 @@ const LoginScreen: FC = () => {
     const {t} = useTranslation();
     const {auth} = useLogin();
 
-    // Reanimated shared value for the arrow's position
-    const translateX = useSharedValue(0);
-
-    // Animated style for RightArrow
-    const animatedStyle = useAnimatedStyle(() => {
-        return {
-            transform: [{translateX: translateX.value}],
-        };
-    });
-
-    // Start the animation: move right and reset to the left
-    React.useEffect(() => {
-        translateX.value = withRepeat(
-            withSequence(
-                withTiming(10, {duration: 1000}), // Move right
-                withTiming(0, {duration: 0}), // Reset to the left
-            ),
-            -1, // Infinite loop
-            false, // Don't reverse
-        );
-    }, [translateX]);
-
     return (
-        <View className="flex-1 items-center justify-center">
+        <>
             <TopLineDecoration />
-            <View className="flex flex-col items-start border-t-4 pt-4 border-white">
-                <MarathonLogo className="mb-4" height={60} width={60} />
-                <Text className="text-white text-[12px] font-plex-light">
-                    {t('login.body')}
-                </Text>
-                <Text className="text-white text-[30px] border-b border-white pb-1 font-plex-regular">
-                    {t('login.header')}
-                </Text>
-                <GreenFilledButton
-                    className="mt-6 flex flex-row px-2 items-center"
-                    onPress={auth}>
-                    <Text className="font-plex-bold text-[50px]">
-                        {t('login.button')}
+            <View className="h-[100px] w-2/5 top-[100px] left-[40px] bg-diagonal-stripes bg-diagonal-stripes-size" />
+            <View className="flex-1 items-center justify-center">
+                <View className="flex flex-col items-start border-t-4 pt-4 border-white">
+                    <MarathonLogo height={60} width={60} />
+                    <Text className="text-white text-[12px] font-plex-light mt-4">
+                        {t('login.body')}
                     </Text>
-                    <Animated.View style={animatedStyle}>
-                        <RightArrowSVG
-                            height={45}
-                            width={45}
-                            className="ml-10 mr-4"
-                        />
-                    </Animated.View>
-                </GreenFilledButton>
+                    <Text className="text-white text-[30px] border-b border-white pb-1 font-plex-regular">
+                        {t('login.header')}
+                    </Text>
+                    <GreenFilledButton
+                        className="mt-6 flex flex-row px-2 pr-8 items-center gap-6"
+                        onPress={auth}>
+                        <Text className="font-plex-bold text-[50px]">
+                            {t('login.button')}
+                        </Text>
+                        <View className="animate-to-right">
+                            <RightArrowSVG height={45} width={45} />
+                        </View>
+                    </GreenFilledButton>
+                </View>
             </View>
-        </View>
+        </>
     );
 };
 

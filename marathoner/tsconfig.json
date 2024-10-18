@@ -1,10 +1,17 @@
 {
-    "extends": "@react-native/typescript-config/tsconfig.json",
-    "include": ["**/*.ts", "**/*.tsx", "src/navigation/Auth/AuthNavigation.ts"],
-    "compilerOptions": {
-        "baseUrl": "./src", // all paths are relative to the baseUrl
-        "paths": {
-            "~/*": ["*"] // resolve any `~/foo/bar` to `<baseUrl>/foo/bar`
-        }
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/navigation/Auth/AuthNavigation.ts",
+    "nativewind-env.d.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src", // all paths are relative to the baseUrl
+    "paths": {
+      "~/*": [
+        "*"
+      ] // resolve any `~/foo/bar` to `<baseUrl>/foo/bar`
     }
+  }
 }

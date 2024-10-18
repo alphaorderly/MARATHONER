@@ -1,4 +1,3 @@
-import {styled} from 'nativewind';
 import React, {FC} from 'react';
 import {Pressable, PressableProps} from 'react-native';
 
@@ -16,8 +15,4 @@ const GreenFilledButton: FC<GreenFilledButtonProps> = ({
     );
 };
 
-export default styled(GreenFilledButton, {
-    props: {
-        className: true,
-    },
-});
+export default GreenFilledButton;
