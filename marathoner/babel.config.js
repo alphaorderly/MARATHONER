@@ -11,5 +11,12 @@ module.exports = {
                 path: '.env',
             },
         ],
+        [
+            'babel-plugin-root-import',
+            {
+                rootPathPrefix: '~',
+                rootPathSuffix: 'src',
+            },
+        ],
     ],
 };

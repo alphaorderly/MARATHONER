@@ -12,9 +12,16 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3D7D49349B4C4B75950FD485 /* IBMPlexSansKR-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 015CD4EAC99F4375AB115B82 /* IBMPlexSansKR-Thin.ttf */; };
+		4883D9A4148646B2A025A18A /* IBMPlexSansKR-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70FEDC3CFB9B4D29A64DECD4 /* IBMPlexSansKR-Light.ttf */; };
+		5466D2E510AE457CAE61695F /* IBMPlexSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F4C0F63C33346DBB1FE0CF0 /* IBMPlexSansKR-SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-marathoner-marathonerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-marathoner-marathonerTests.a */; };
+		7B13333F9C5F4B7E93F08096 /* IBMPlexSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E12D27495CA4A99B8796538 /* IBMPlexSansKR-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		AA3A34802F484229946B3EE4 /* IBMPlexSansKR-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3701D397651463A87BC9CFB /* IBMPlexSansKR-ExtraLight.ttf */; };
 		B0826C263A7EEC7CEAFD58A7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DC0C80FC5FEFEDDD401ED64E /* PrivacyInfo.xcprivacy */; };
+		B593561F002F4C0D9D8A61C7 /* IBMPlexSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA7FE36E844D41A181DC99 /* IBMPlexSansKR-Medium.ttf */; };
+		C843386DAF7F41AEA8FB56ED /* IBMPlexSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD96F337A16443608054A307 /* IBMPlexSansKR-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +38,7 @@
 		00E356EE1AD99517003FC87E /* marathonerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marathonerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* marathonerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marathonerTests.m; sourceTree = "<group>"; };
+		015CD4EAC99F4375AB115B82 /* IBMPlexSansKR-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-Thin.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* marathoner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marathoner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = marathoner/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = marathoner/AppDelegate.mm; sourceTree = "<group>"; };
@@ -43,8 +51,14 @@
 		5709B34CF0A7D63546082F79 /* Pods-marathoner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marathoner.release.xcconfig"; path = "Target Support Files/Pods-marathoner/Pods-marathoner.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-marathoner-marathonerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marathoner-marathonerTests.debug.xcconfig"; path = "Target Support Files/Pods-marathoner-marathonerTests/Pods-marathoner-marathonerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-marathoner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marathoner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E12D27495CA4A99B8796538 /* IBMPlexSansKR-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-Regular.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-Regular.ttf"; sourceTree = "<group>"; };
+		70FEDC3CFB9B4D29A64DECD4 /* IBMPlexSansKR-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-Light.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = marathoner/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-marathoner-marathonerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marathoner-marathonerTests.release.xcconfig"; path = "Target Support Files/Pods-marathoner-marathonerTests/Pods-marathoner-marathonerTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BFA7FE36E844D41A181DC99 /* IBMPlexSansKR-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-Medium.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-Medium.ttf"; sourceTree = "<group>"; };
+		9F4C0F63C33346DBB1FE0CF0 /* IBMPlexSansKR-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-SemiBold.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-SemiBold.ttf"; sourceTree = "<group>"; };
+		A3701D397651463A87BC9CFB /* IBMPlexSansKR-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-ExtraLight.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CD96F337A16443608054A307 /* IBMPlexSansKR-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-Bold.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		DC0C80FC5FEFEDDD401ED64E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = marathoner/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -111,6 +125,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		691C6067B242450891AEFD0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD96F337A16443608054A307 /* IBMPlexSansKR-Bold.ttf */,
+				A3701D397651463A87BC9CFB /* IBMPlexSansKR-ExtraLight.ttf */,
+				70FEDC3CFB9B4D29A64DECD4 /* IBMPlexSansKR-Light.ttf */,
+				8BFA7FE36E844D41A181DC99 /* IBMPlexSansKR-Medium.ttf */,
+				6E12D27495CA4A99B8796538 /* IBMPlexSansKR-Regular.ttf */,
+				9F4C0F63C33346DBB1FE0CF0 /* IBMPlexSansKR-SemiBold.ttf */,
+				015CD4EAC99F4375AB115B82 /* IBMPlexSansKR-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +156,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				691C6067B242450891AEFD0C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -221,6 +251,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ko,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
@@ -249,6 +280,13 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				B0826C263A7EEC7CEAFD58A7 /* PrivacyInfo.xcprivacy in Resources */,
+				C843386DAF7F41AEA8FB56ED /* IBMPlexSansKR-Bold.ttf in Resources */,
+				AA3A34802F484229946B3EE4 /* IBMPlexSansKR-ExtraLight.ttf in Resources */,
+				4883D9A4148646B2A025A18A /* IBMPlexSansKR-Light.ttf in Resources */,
+				B593561F002F4C0D9D8A61C7 /* IBMPlexSansKR-Medium.ttf in Resources */,
+				7B13333F9C5F4B7E93F08096 /* IBMPlexSansKR-Regular.ttf in Resources */,
+				5466D2E510AE457CAE61695F /* IBMPlexSansKR-SemiBold.ttf in Resources */,
+				3D7D49349B4C4B75950FD485 /* IBMPlexSansKR-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
