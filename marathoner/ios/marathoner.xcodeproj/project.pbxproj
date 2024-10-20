@@ -22,6 +22,8 @@
 		B0826C263A7EEC7CEAFD58A7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DC0C80FC5FEFEDDD401ED64E /* PrivacyInfo.xcprivacy */; };
 		B593561F002F4C0D9D8A61C7 /* IBMPlexSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA7FE36E844D41A181DC99 /* IBMPlexSansKR-Medium.ttf */; };
 		C843386DAF7F41AEA8FB56ED /* IBMPlexSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD96F337A16443608054A307 /* IBMPlexSansKR-Bold.ttf */; };
+		CE83F8511F704B0581F71FFE /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E71D3AFB0D294C2DA63F6264 /* Aldrich-Regular.ttf */; };
+		A5D9EB2380404A24967D01DD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6CD1CC0B651481E9779D445 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CD96F337A16443608054A307 /* IBMPlexSansKR-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSansKR-Bold.ttf"; path = "../src/assets/fonts/IBMPlexSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		DC0C80FC5FEFEDDD401ED64E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = marathoner/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E71D3AFB0D294C2DA63F6264 /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; name = "Aldrich-Regular.ttf"; path = "../src/assets/fonts/Aldrich-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6CD1CC0B651481E9779D445 /* Readme.md */ = {isa = PBXFileReference; name = "Readme.md"; path = "../src/assets/fonts/Readme.md"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				6E12D27495CA4A99B8796538 /* IBMPlexSansKR-Regular.ttf */,
 				9F4C0F63C33346DBB1FE0CF0 /* IBMPlexSansKR-SemiBold.ttf */,
 				015CD4EAC99F4375AB115B82 /* IBMPlexSansKR-Thin.ttf */,
+				E71D3AFB0D294C2DA63F6264 /* Aldrich-Regular.ttf */,
+				D6CD1CC0B651481E9779D445 /* Readme.md */,
 			);
 			name = Resources;
 			path = "";
@@ -287,6 +293,8 @@
 				7B13333F9C5F4B7E93F08096 /* IBMPlexSansKR-Regular.ttf in Resources */,
 				5466D2E510AE457CAE61695F /* IBMPlexSansKR-SemiBold.ttf in Resources */,
 				3D7D49349B4C4B75950FD485 /* IBMPlexSansKR-Thin.ttf in Resources */,
+				CE83F8511F704B0581F71FFE /* Aldrich-Regular.ttf in Resources */,
+				A5D9EB2380404A24967D01DD /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

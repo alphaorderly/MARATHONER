@@ -74,6 +74,7 @@
 		<string>IBMPlexSansKR-Regular.ttf</string>
 		<string>IBMPlexSansKR-SemiBold.ttf</string>
 		<string>IBMPlexSansKR-Thin.ttf</string>
+		<string>Aldrich-Regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
