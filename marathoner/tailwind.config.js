@@ -13,9 +13,13 @@ module.exports = {
                 'plex-thin': 'IBMPlexSansKR-Thin',
                 'plex-extralight': 'IBMPlexSansKR-ExtraLight',
                 'plex-semibold': 'IBMPlexSansKR-SemiBold',
+                aldrich: 'Aldrich-Regular',
             },
             colors: {
                 'vivid-green': '#B4FD2E',
+                'light-green': '#eafc88',
+                'vivid-purple': '#75316b',
+                'light-purple': '#984E8F',
             },
             keyframes: {
                 'to-right': {
