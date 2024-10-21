@@ -36,6 +36,10 @@
     {
       "path": "src/assets/fonts/Readme.md",
       "sha1": "02e26394a2b728b1ea5795b10504a4abdeb096cd"
+    },
+    {
+      "path": "src/assets/fonts/VCROSTMono.ttf",
+      "sha1": "6843782cf331dc53b5913c15bf3ee67ceef83705"
     }
   ]
 }

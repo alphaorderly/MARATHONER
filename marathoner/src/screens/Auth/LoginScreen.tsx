@@ -31,7 +31,7 @@ const LoginScreen: FC = () => {
             <CornerPointCard
                 color="#af59a5"
                 size={10}
-                className="w-52 h-20 absolute top-44 left-12 p-4 opacity-50">
+                className="w-64 h-20 absolute top-44 left-12 p-4 opacity-50">
                 <Text className="text-light-purple font-plex-regular text-sm">
                     - NEED AUTHENTICATION...
                 </Text>
@@ -43,7 +43,7 @@ const LoginScreen: FC = () => {
                 </Text>
             </CornerPointCard>
             <DiagonalPattern
-                className="h-20 w-52 opacity-60 self-start absolute top-2 left-12"
+                className="h-20 w-64 opacity-60 self-start absolute top-2 left-12"
                 color="#af59a5"
                 space={10}
                 stripesWidth={4}
@@ -54,7 +54,7 @@ const LoginScreen: FC = () => {
                     <Text className="text-white text-sm font-plex-light mt-4">
                         {t('login.body')}
                     </Text>
-                    <Text className="text-white text-3xl border-b border-white pb-1 font-plex-regular self-stretch">
+                    <Text className="text-white text-3xl border-b border-white pb-1 font-plex-medium self-stretch">
                         {t('login.header')}
                     </Text>
                     <GreenFilledButton

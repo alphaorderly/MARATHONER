@@ -14,6 +14,7 @@ module.exports = {
                 'plex-extralight': 'IBMPlexSansKR-ExtraLight',
                 'plex-semibold': 'IBMPlexSansKR-SemiBold',
                 aldrich: 'Aldrich-Regular',
+                osd: 'VCROSTMono',
             },
             colors: {
                 'vivid-green': '#B4FD2E',

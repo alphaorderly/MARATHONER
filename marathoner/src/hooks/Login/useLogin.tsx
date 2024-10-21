@@ -10,6 +10,8 @@ const useLogin = () => {
         try {
             const response: AuthorizeResult = await authorize(authConfig);
 
+            console.log(JSON.stringify(response, null, 4));
+
             if (
                 response.accessToken &&
                 response.tokenAdditionalParameters &&

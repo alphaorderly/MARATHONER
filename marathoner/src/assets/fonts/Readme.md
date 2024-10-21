@@ -7,3 +7,8 @@
 ### Aldrich
 
 -   for sqaure numbers
+
+### VCR OSD
+
+-   Terminal-like pixel font
+-   Only include alphabets

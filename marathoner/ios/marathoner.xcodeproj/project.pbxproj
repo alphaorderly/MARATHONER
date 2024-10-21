@@ -24,6 +24,7 @@
 		C843386DAF7F41AEA8FB56ED /* IBMPlexSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD96F337A16443608054A307 /* IBMPlexSansKR-Bold.ttf */; };
 		CE83F8511F704B0581F71FFE /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E71D3AFB0D294C2DA63F6264 /* Aldrich-Regular.ttf */; };
 		A5D9EB2380404A24967D01DD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6CD1CC0B651481E9779D445 /* Readme.md */; };
+		84F209A9C4D44092B007D428 /* VCROSTMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75683B9C66764E56A30EC98F /* VCROSTMono.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		E71D3AFB0D294C2DA63F6264 /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; name = "Aldrich-Regular.ttf"; path = "../src/assets/fonts/Aldrich-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D6CD1CC0B651481E9779D445 /* Readme.md */ = {isa = PBXFileReference; name = "Readme.md"; path = "../src/assets/fonts/Readme.md"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		75683B9C66764E56A30EC98F /* VCROSTMono.ttf */ = {isa = PBXFileReference; name = "VCROSTMono.ttf"; path = "../src/assets/fonts/VCROSTMono.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				015CD4EAC99F4375AB115B82 /* IBMPlexSansKR-Thin.ttf */,
 				E71D3AFB0D294C2DA63F6264 /* Aldrich-Regular.ttf */,
 				D6CD1CC0B651481E9779D445 /* Readme.md */,
+				75683B9C66764E56A30EC98F /* VCROSTMono.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -295,6 +298,7 @@
 				3D7D49349B4C4B75950FD485 /* IBMPlexSansKR-Thin.ttf in Resources */,
 				CE83F8511F704B0581F71FFE /* Aldrich-Regular.ttf in Resources */,
 				A5D9EB2380404A24967D01DD /* Readme.md in Resources */,
+				84F209A9C4D44092B007D428 /* VCROSTMono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
