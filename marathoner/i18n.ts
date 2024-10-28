@@ -17,12 +17,12 @@ const resources = {
 } as const;
 
 // i18n 설정
-i18n.use(RNLanguageDetector) // 여기서 언어 감지기 사용
+i18n.use(RNLanguageDetector)
     .use(initReactI18next)
     .init({
         resources,
         fallbackLng: 'en',
-        debug: true, // 디버깅용 옵션 추가
+        debug: true,
         compatibilityJSON: 'v3',
         interpolation: {
             escapeValue: false,

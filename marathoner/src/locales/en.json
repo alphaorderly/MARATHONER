@@ -3,5 +3,10 @@
         "header": "Sign in to your account",
         "body": "Need authorization, protocol 98123 2138-1233",
         "button": "Sign in"
+    },
+    "component": {
+        "input": {
+            "search_placeholder": "Search"
+        }
     }
 }

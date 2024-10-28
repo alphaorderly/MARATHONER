@@ -1,6 +1,8 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import "RNBootSplash.h" 
+
 
 @implementation AppDelegate
 
@@ -40,7 +42,10 @@
     return [RCTLinkingManager application:application openURL:url options:options];
 }
 
-
+- (void)customizeRootView:(RCTRootView *)rootView {
+  [super customizeRootView:rootView];
+  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView]; // ⬅️ initialize the splash screen
+}
 
 
 @end

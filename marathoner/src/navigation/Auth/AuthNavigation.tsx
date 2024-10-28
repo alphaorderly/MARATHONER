@@ -2,7 +2,7 @@ import {useAtomValue} from 'jotai';
 import {FC} from 'react';
 import authAtom from '../../store/jotai/authAtom';
 import LoginScreen from '../../screens/Auth/LoginScreen';
-import MainScren from '~/screens/Main/MainScreen';
+import MainNaviation from '../Main/MainNavigation';
 
 const AuthNavigation: FC = () => {
     const token = useAtomValue(authAtom);
@@ -10,7 +10,7 @@ const AuthNavigation: FC = () => {
     if (token.accessToken === null || token.membershipId === null) {
         return <LoginScreen />;
     } else {
-        return <MainScren />;
+        return <MainNaviation />;
     }
 };
 

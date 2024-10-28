@@ -1,21 +1,10 @@
-import {useResetAtom} from 'jotai/utils';
 import {FC} from 'react';
-import {Text, View} from 'react-native';
-import HexagonCard from '~/components/Card/Filled/HexagonCard';
-import authAtom from '~/store/jotai/authAtom';
+import {View} from 'react-native';
 
-const MainScren: FC = () => {
-    const resetAuth = useResetAtom(authAtom);
-
+const MainScreen: FC = () => {
     return (
-        <View
-            className="flex-1 flex flex-col justify-center items-center"
-            onTouchStart={resetAuth}>
-            <HexagonCard size={50} color="#5d1bcf">
-                <Text className="text-white font-aldrich text-2xl">A</Text>
-            </HexagonCard>
-        </View>
+        <View className="flex-1 flex flex-col justify-center items-center bg-background" />
     );
 };
 
-export default MainScren;
+export default MainScreen;

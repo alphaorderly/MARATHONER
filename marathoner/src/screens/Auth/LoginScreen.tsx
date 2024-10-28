@@ -2,7 +2,7 @@ import React from 'react';
 import {FC} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text, View} from 'react-native';
-import GreenFilledButton from '~/components/Button/Filled/GreenFilledButton';
+import GreenFilledButton from '~/components/Button/Filled/FilledButton';
 import RightArrowSVG from '~/assets/images/icons/goliath_btn_arrow.svg';
 import useLogin from '~/hooks/Login/useLogin';
 import TopLineDecoration, {
@@ -58,6 +58,7 @@ const LoginScreen: FC = () => {
                         {t('login.header')}
                     </Text>
                     <GreenFilledButton
+                        colorClass="bg-vivid-green"
                         className="mt-6 flex flex-row px-2 pr-8 items-center gap-6"
                         onPress={auth}>
                         <Text className="font-plex-bold text-5xl">

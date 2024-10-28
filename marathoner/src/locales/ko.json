@@ -3,5 +3,10 @@
         "header": "번지넷 계정으로 로그인",
         "body": "사용자 인증이 필요합니다, 프로토콜 98123 2138-1233",
         "button": "로그인"
+    },
+    "component": {
+        "input": {
+            "search_placeholder": "검색"
+        }
     }
 }
