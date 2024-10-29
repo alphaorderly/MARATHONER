@@ -18,7 +18,6 @@ import memberAtom from '~/store/jotai/memberAtom';
 import authAtom from '~/store/jotai/authAtom';
 import {getBungieNetUserById} from 'bungie-marathon-api';
 import useBungieApi from '~/hooks/BunieApi/useBungieApi';
-import {API_KEY} from '@env';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -127,7 +126,6 @@ const MainNavigation = () => {
         const getMemberData = async () => {
             handler(async () => {
                 const memberData = await getBungieNetUserById(
-                    API_KEY,
                     auth.membershipId ?? '',
                 );
 
