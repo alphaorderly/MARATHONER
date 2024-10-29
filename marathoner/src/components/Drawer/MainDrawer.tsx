@@ -3,6 +3,7 @@ import {FC} from 'react';
 import {Text, View} from 'react-native';
 import DiagonalPattern from '../Decoration/Pattern/DiagonalPattern';
 import WhiteBorderButton from '../Button/Bordered/WhiteBorderedButton';
+import DrawerUserProfile from '../User/DrawerUserProfile';
 
 const MainDrawer: FC<DrawerContentComponentProps> = ({
     state,
@@ -13,6 +14,7 @@ const MainDrawer: FC<DrawerContentComponentProps> = ({
 
     return (
         <View className="bg-light-background flex flex-col h-full">
+            <DrawerUserProfile />
             <View className="flex-1 p-4 flex flex-col gap-4">
                 {state.routes.map((route, index) => {
                     const title =

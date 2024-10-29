@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unstable-nested-components */
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Image, Pressable, View} from 'react-native';
@@ -9,16 +10,27 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SettingScreen from '~/screens/Setting/SettingScreen';
 import {StackNavigationHelpers} from '@react-navigation/stack/lib/typescript/src/types';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import SearchResult from '~/screens/Search/SearchResult';
+import {DrawerNavigationHelpers} from '@react-navigation/drawer/lib/typescript/src/types';
+import {useAtom, useAtomValue} from 'jotai';
+import memberAtom from '~/store/jotai/memberAtom';
+import authAtom from '~/store/jotai/authAtom';
+import {getBungieNetUserById} from 'bungie-marathon-api';
+import useBungieApi from '~/hooks/BunieApi/useBungieApi';
+import {API_KEY} from '@env';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
-const HeaderIcon = () => (
-    <View className="p-2 flex-shrink-0">
+const HeaderIcon = ({navigation}: {navigation: DrawerNavigationHelpers}) => (
+    <Pressable
+        className="p-2 flex-shrink-0"
+        onPress={() => {
+            navigation.openDrawer();
+        }}>
         <Image source={BurgerIcon} className="w-8 h-8 mx-2" />
-    </View>
+    </Pressable>
 );
 
 const HeaderTitle = ({navigation}: {navigation?: StackNavigationHelpers}) => {
@@ -57,22 +69,30 @@ const MainDrawerNavigation = ({
         <Drawer.Navigator
             initialRouteName="Home"
             drawerContent={MainDrawer}
-            screenOptions={{
-                headerShadowVisible: false,
-                headerStyle: {backgroundColor: 'black'},
+            screenOptions={({
+                navigation: drawerNavigation,
+            }: {
+                navigation: DrawerNavigationHelpers;
+            }) => {
+                return {
+                    headerShadowVisible: false,
+                    headerStyle: {backgroundColor: 'black'},
 
-                headerBackgroundContainerStyle: {
-                    display: 'flex',
-                    flexDirection: 'row',
-                },
+                    headerBackgroundContainerStyle: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                    },
 
-                headerTitleContainerStyle: {
-                    width: '100%',
-                },
+                    headerTitleContainerStyle: {
+                        width: '100%',
+                    },
 
-                headerTitle: () => <HeaderTitle navigation={navigation} />,
-                headerLeft: () => <HeaderIcon />,
-                headerRight: () => <HeaderRight navigation={navigation} />,
+                    headerTitle: () => <HeaderTitle navigation={navigation} />,
+                    headerLeft: () => (
+                        <HeaderIcon navigation={drawerNavigation} />
+                    ),
+                    headerRight: () => <HeaderRight navigation={navigation} />,
+                };
             }}>
             <Drawer.Screen
                 name="Home"
@@ -98,36 +118,58 @@ const StackBackbutton = ({
     );
 };
 
-const MainNavigation = () => (
-    <Stack.Navigator
-        screenOptions={({navigation}) => ({
-            headerStyle: {
-                backgroundColor: 'black',
-            },
-            headerTitleStyle: {
-                color: 'white',
-                fontFamily: 'IBMPlexSansKR-SemiBold',
-                fontSize: 20,
-            },
-            headerShadowVisible: false,
-            headerLeft: () => <StackBackbutton navigation={navigation} />,
-        })}>
-        <Stack.Screen
-            name="MainDrawer"
-            component={MainDrawerNavigation}
-            options={{headerShown: false}}
-        />
-        <Stack.Screen
-            name="Setting"
-            component={SettingScreen}
-            options={{title: '설정'}}
-        />
-        <Stack.Screen
-            name="SearchResult"
-            component={SearchResult}
-            options={{title: '검색 결과'}}
-        />
-    </Stack.Navigator>
-);
+const MainNavigation = () => {
+    const [member, setMember] = useAtom(memberAtom);
+    const auth = useAtomValue(authAtom);
+    const handler = useBungieApi();
+
+    useEffect(() => {
+        const getMemberData = async () => {
+            handler(async () => {
+                const memberData = await getBungieNetUserById(
+                    API_KEY,
+                    auth.membershipId ?? '',
+                );
+
+                setMember(memberData.Response);
+            });
+        };
+        if (member === null) {
+            getMemberData();
+        }
+    }, []);
+
+    return (
+        <Stack.Navigator
+            screenOptions={({navigation}) => ({
+                headerStyle: {
+                    backgroundColor: 'black',
+                },
+                headerTitleStyle: {
+                    color: 'white',
+                    fontFamily: 'IBMPlexSansKR-SemiBold',
+                    fontSize: 20,
+                },
+                headerShadowVisible: false,
+                headerLeft: () => <StackBackbutton navigation={navigation} />,
+            })}>
+            <Stack.Screen
+                name="MainDrawer"
+                component={MainDrawerNavigation}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="Setting"
+                component={SettingScreen}
+                options={{title: '설정'}}
+            />
+            <Stack.Screen
+                name="SearchResult"
+                component={SearchResult}
+                options={{title: '검색 결과'}}
+            />
+        </Stack.Navigator>
+    );
+};
 
 export default MainNavigation;

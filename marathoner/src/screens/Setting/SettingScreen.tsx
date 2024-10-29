@@ -1,11 +1,10 @@
-import {useResetAtom} from 'jotai/utils';
 import {Text, View} from 'react-native';
 import GreenFilledButton from '~/components/Button/Filled/FilledButton';
 import LanguageSelectDropdown from '~/components/Language/LanguageSelectDropdown';
-import authAtom from '~/store/jotai/authAtom';
+import useLogout from '~/hooks/Login/useLogout';
 
 const SettingScreen = () => {
-    const reset = useResetAtom(authAtom);
+    const logout = useLogout();
 
     return (
         <View className="flex-1 bg-black p-4 flex flex-col py-10 gap-10">
@@ -14,7 +13,7 @@ const SettingScreen = () => {
                 colorClass="bg-vivid-red"
                 className="h-12 mt-4 w-full flex flex-col justify-center"
                 onPress={() => {
-                    reset();
+                    logout();
                 }}>
                 <Text className="text-center text-3xl font-plex-bold">
                     로그아웃

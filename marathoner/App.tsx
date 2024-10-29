@@ -10,15 +10,18 @@ import storage from '~/store/MMKV/storage';
 
 const App: FC = () => {
     useEffect(() => {
-        const savedLanguage = storage.getString('language');
+        const languageSetting = () => {
+            const savedLanguage = storage.getString('language');
+            if (savedLanguage) {
+                i18n.changeLanguage(savedLanguage);
+            } else {
+                const defaultLanguage = i18n.languages[0];
+                i18n.changeLanguage(defaultLanguage);
+                storage.set('language', defaultLanguage);
+            }
+        };
 
-        if (savedLanguage) {
-            i18n.changeLanguage(savedLanguage);
-        } else {
-            const defaultLanguage = i18n.languages[0];
-            i18n.changeLanguage(defaultLanguage);
-            storage.set('language', defaultLanguage);
-        }
+        languageSetting();
 
         sleep(2000).then(() => {
             BootSplash.hide();
