@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unstable-nested-components */
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Image, Pressable, View} from 'react-native';
@@ -10,14 +9,15 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SettingScreen from '~/screens/Setting/SettingScreen';
 import {StackNavigationHelpers} from '@react-navigation/stack/lib/typescript/src/types';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import SearchResult from '~/screens/Search/SearchResult';
 import {DrawerNavigationHelpers} from '@react-navigation/drawer/lib/typescript/src/types';
-import {useAtom, useAtomValue} from 'jotai';
+import useGetBungieApi from '~/hooks/BungieApi/useGetBungieApi';
+import {useAtomValue, useSetAtom} from 'jotai';
 import memberAtom from '~/store/jotai/memberAtom';
-import authAtom from '~/store/jotai/authAtom';
+import {GetBungieNetUserByIdResponseType} from 'bungie-marathon-api/types';
 import {getBungieNetUserById} from 'bungie-marathon-api';
-import useBungieApi from '~/hooks/BunieApi/useBungieApi';
+import authAtom from '~/store/jotai/authAtom';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -64,6 +64,18 @@ const MainDrawerNavigation = ({
 }: {
     navigation: StackNavigationHelpers;
 }) => {
+    const memberSet = useSetAtom(memberAtom);
+    const authData = useAtomValue(authAtom);
+
+    useGetBungieApi<GetBungieNetUserByIdResponseType>(
+        getBungieNetUserById({
+            membershipId: Number(authData.membershipId),
+        }),
+        (data) => {
+            memberSet(data.Response);
+        },
+    );
+
     return (
         <Drawer.Navigator
             initialRouteName="Home"
@@ -118,25 +130,6 @@ const StackBackbutton = ({
 };
 
 const MainNavigation = () => {
-    const [member, setMember] = useAtom(memberAtom);
-    const auth = useAtomValue(authAtom);
-    const handler = useBungieApi();
-
-    useEffect(() => {
-        const getMemberData = async () => {
-            handler(async () => {
-                const memberData = await getBungieNetUserById(
-                    auth.membershipId ?? '',
-                );
-
-                setMember(memberData.Response);
-            });
-        };
-        if (member === null) {
-            getMemberData();
-        }
-    }, []);
-
     return (
         <Stack.Navigator
             screenOptions={({navigation}) => ({
