@@ -12,6 +12,7 @@ import MarathonLogo from '~/assets/images/logo/gol_icon.svg';
 import CornerPointCard from '~/components/Card/Bordered/CornerPointCard';
 import DiagonalPattern from '~/components/Decoration/Pattern/DiagonalPattern';
 import B from '~/components/Utility/Text/B';
+import SignupGlyph from '~/assets/images/icons/goliath-sign-up-glyph.svg';
 
 const LoginScreen: FC = () => {
     const {t} = useTranslation();
@@ -49,6 +50,12 @@ const LoginScreen: FC = () => {
                 stripesWidth={4}
             />
             <View className="flex-1 items-center justify-center flex flex-col">
+                <SignupGlyph
+                    height={40}
+                    width={40}
+                    strokeWidth={8}
+                    stroke="#000000"
+                />
                 <View className="flex flex-col items-start border-t-4 pt-4 border-white">
                     <MarathonLogo height={60} width={60} />
                     <Text className="text-white text-sm font-plex-light mt-4">
